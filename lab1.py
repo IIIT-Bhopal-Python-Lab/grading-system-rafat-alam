@@ -32,24 +32,5 @@ def calc_grade():
       # Marks integer input exception handling
       print("Oops! That was not a valid marks. Try again...\n")
 
-# Choice Selection
-print("Please choose an option")
-print("1. Calculate grade")
-print("2. Exit")
-
-
-choice = ""
-
-while True:
-  ch = input("Enter your choice number : ");
-  if(ch == "1"):
-    choice = ch
-    print("\nNote : For exiting option enter \"exit\" in marks\n")
-    break
-  elif(ch == "2"):
-    choice = ch
-    break
-  else:
-    print("Wrong choice. Try Again.\n")
-
+print("\nNote : For exiting option enter \"exit\" in marks\n")
 calc_grade()
