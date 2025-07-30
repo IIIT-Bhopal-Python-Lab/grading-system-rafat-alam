@@ -1,36 +1,18 @@
-def calc_grade():
-  while True:
-    try:
+# grade.py
+import sys
 
-      # Input Marks
-      marks = input("Please enter marks [0, 100]: ")
+def get_grade(marks):
+    if marks >= 90:
+        return "A"
+    elif marks >= 75:
+        return "B"
+    elif marks >= 60:
+        return "C"
+    elif marks >= 40:
+        return "D"
+    else:
+        return "F"
 
-      if(marks == "exit"):
-        print("\nExiting...")
-        break
-
-      marks = int(marks)
-
-      # Marks Validation
-      if(marks < 0 or marks > 100):
-        print("Marks is not in range of [0, 100]\n")
-        continue
-      else:
-
-        # Grade Evaluation
-        if(marks >= 90):
-          print("Grade : A\n")
-        elif(marks >= 75):
-          print("Grade : B\n")
-        elif(marks >= 60):
-          print("Grade : C\n")
-        elif(marks >= 40):
-          print("Grade : D\n")
-        else:
-          print("Grade : F\n")
-    except ValueError:
-      # Marks integer input exception handling
-      print("Oops! That was not a valid marks. Try again...\n")
-
-print("\nNote : For exiting option enter \"exit\" in marks\n")
-calc_grade()
+if __name__ == "__main__":
+    marks = int(sys.stdin.read())
+    print(get_grade(marks))
