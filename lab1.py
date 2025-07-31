@@ -23,5 +23,5 @@ def get_grade():
   except ValueError:
     print("Invalid Input\n")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
   get_grade()
